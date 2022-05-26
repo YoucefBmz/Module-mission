@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  overflow-x: hidden;
 }
+/*
+  login
+*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login {
+  margin: 0 25px;
+  min-height: 95vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  width: 850px;
+}
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*****
+
+******/
+.appTitle {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.alert {
+  margin-top: 20px;
+  width: 400px;
+  margin: auto;
+}
+
+/***
+spinner
+**/
+.loading {
+  text-align: center;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #001529;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
   }
-  to {
-    transform: rotate(360deg);
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
   }
 }
